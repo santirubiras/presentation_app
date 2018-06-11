@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1a1a"
+    android:backgroundTint="#1a1a1a"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1a1a1a"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp">
+
+
+        <Button
+            android:id="@+id/trash"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@android:drawable/ic_menu_delete"
+            android:backgroundTint="#99ccff"
+            android:onClick="delete" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <Button
+            android:id="@+id/loadimage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@android:drawable/ic_menu_add"
+            android:backgroundTint="#99ccff"
+            android:scaleX="0.9"
+            android:scaleY="0.9" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <Button
+            android:id="@+id/cam"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1.5dp"
+            android:background="@android:drawable/ic_menu_camera"
+            android:backgroundTint="#60afff"
+            android:elevation="0dp"
+            android:onClick="takePhoto"
+            android:scaleX="0.9"
+            android:scaleY="0.9" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1" />
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@android:drawable/ic_media_play"
+            android:backgroundTint="#60afff"
+            android:onClick="imageSwitcher" />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="15dp"
+        android:numColumns="auto_fit"
+        android:paddingTop="15dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="15dp" />
+
+
+</LinearLayout>
